@@ -1,0 +1,22 @@
+[2026-02-10T17:25:19.142+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: olist_end_to_end_pipeline.2_transform_silver manual__2026-02-10T17:23:35.629943+00:00 [queued]>
+[2026-02-10T17:25:19.145+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: olist_end_to_end_pipeline.2_transform_silver manual__2026-02-10T17:23:35.629943+00:00 [queued]>
+[2026-02-10T17:25:19.145+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-02-10T17:25:19.151+0000] {taskinstance.py:2191} INFO - Executing <Task(DatabricksRunNowOperator): 2_transform_silver> on 2026-02-10 17:23:35.629943+00:00
+[2026-02-10T17:25:19.154+0000] {standard_task_runner.py:60} INFO - Started process 219 to run task
+[2026-02-10T17:25:19.156+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'olist_end_to_end_pipeline', '2_transform_silver', 'manual__2026-02-10T17:23:35.629943+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/olist_pipeline.py', '--cfg-path', '/tmp/tmpysl8ywis']
+[2026-02-10T17:25:19.157+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask 2_transform_silver
+[2026-02-10T17:25:19.177+0000] {task_command.py:423} INFO - Running <TaskInstance: olist_end_to_end_pipeline.2_transform_silver manual__2026-02-10T17:23:35.629943+00:00 [running]> on host ad800f624f1b
+[2026-02-10T17:25:19.205+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='serhat' AIRFLOW_CTX_DAG_ID='olist_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='2_transform_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-02-10T17:23:35.629943+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-10T17:23:35.629943+00:00'
+[2026-02-10T17:25:19.207+0000] {base.py:83} INFO - Using connection ID 'databricks_default' for task execution.
+[2026-02-10T17:25:20.280+0000] {databricks.py:66} INFO - Run submitted with run_id: 971211949596783
+[2026-02-10T17:25:21.868+0000] {databricks.py:128} INFO - 2_transform_silver in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-02-10T17:25:21.871+0000] {databricks.py:129} INFO - View run status, Spark UI, and logs at https://dbc-020ab467-e77c.cloud.databricks.com/?o=7474655064357178#job/25465186672948/run/971211949596783
+[2026-02-10T17:25:21.872+0000] {databricks.py:130} INFO - Sleeping for 30 seconds.
+[2026-02-10T17:25:52.749+0000] {databricks.py:128} INFO - 2_transform_silver in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-02-10T17:25:52.754+0000] {databricks.py:129} INFO - View run status, Spark UI, and logs at https://dbc-020ab467-e77c.cloud.databricks.com/?o=7474655064357178#job/25465186672948/run/971211949596783
+[2026-02-10T17:25:52.754+0000] {databricks.py:130} INFO - Sleeping for 30 seconds.
+[2026-02-10T17:26:24.099+0000] {databricks.py:77} INFO - 2_transform_silver completed successfully.
+[2026-02-10T17:26:24.105+0000] {databricks.py:78} INFO - View run status, Spark UI, and logs at https://dbc-020ab467-e77c.cloud.databricks.com/?o=7474655064357178#job/25465186672948/run/971211949596783
+[2026-02-10T17:26:24.130+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=olist_end_to_end_pipeline, task_id=2_transform_silver, execution_date=20260210T172335, start_date=20260210T172519, end_date=20260210T172624
+[2026-02-10T17:26:24.228+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-10T17:26:24.292+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

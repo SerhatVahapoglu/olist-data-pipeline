@@ -1,0 +1,19 @@
+[2026-02-10T17:52:20.279+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: olist_end_to_end_pipeline.2_quality_check_bronze manual__2026-02-10T17:51:09.311666+00:00 [queued]>
+[2026-02-10T17:52:20.285+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: olist_end_to_end_pipeline.2_quality_check_bronze manual__2026-02-10T17:51:09.311666+00:00 [queued]>
+[2026-02-10T17:52:20.286+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-02-10T17:52:20.296+0000] {taskinstance.py:2191} INFO - Executing <Task(DatabricksRunNowOperator): 2_quality_check_bronze> on 2026-02-10 17:51:09.311666+00:00
+[2026-02-10T17:52:20.301+0000] {standard_task_runner.py:60} INFO - Started process 301 to run task
+[2026-02-10T17:52:20.304+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'olist_end_to_end_pipeline', '2_quality_check_bronze', 'manual__2026-02-10T17:51:09.311666+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/olist_pipeline.py', '--cfg-path', '/tmp/tmpn3uea64g']
+[2026-02-10T17:52:20.305+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask 2_quality_check_bronze
+[2026-02-10T17:52:20.326+0000] {task_command.py:423} INFO - Running <TaskInstance: olist_end_to_end_pipeline.2_quality_check_bronze manual__2026-02-10T17:51:09.311666+00:00 [running]> on host ad800f624f1b
+[2026-02-10T17:52:20.357+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='serhat' AIRFLOW_CTX_DAG_ID='olist_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='2_quality_check_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-02-10T17:51:09.311666+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-10T17:51:09.311666+00:00'
+[2026-02-10T17:52:20.360+0000] {base.py:83} INFO - Using connection ID 'databricks_default' for task execution.
+[2026-02-10T17:52:21.465+0000] {databricks.py:66} INFO - Run submitted with run_id: 358430581287264
+[2026-02-10T17:52:23.126+0000] {databricks.py:128} INFO - 2_quality_check_bronze in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-02-10T17:52:23.129+0000] {databricks.py:129} INFO - View run status, Spark UI, and logs at https://dbc-020ab467-e77c.cloud.databricks.com/?o=7474655064357178#job/694496822226620/run/358430581287264
+[2026-02-10T17:52:23.130+0000] {databricks.py:130} INFO - Sleeping for 30 seconds.
+[2026-02-10T17:52:54.036+0000] {databricks.py:77} INFO - 2_quality_check_bronze completed successfully.
+[2026-02-10T17:52:54.039+0000] {databricks.py:78} INFO - View run status, Spark UI, and logs at https://dbc-020ab467-e77c.cloud.databricks.com/?o=7474655064357178#job/694496822226620/run/358430581287264
+[2026-02-10T17:52:54.051+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=olist_end_to_end_pipeline, task_id=2_quality_check_bronze, execution_date=20260210T175109, start_date=20260210T175220, end_date=20260210T175254
+[2026-02-10T17:52:54.116+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-10T17:52:54.140+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
